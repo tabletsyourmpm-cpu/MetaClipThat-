@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Two-stage splash: FluxTech studio logo on black, then the "M Clip that!"
+     logo on pale yellow. Stage 2 sits beneath stage 1; the activity crossfades
+     stage 1 away to transition. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <ImageView
+        android:id="@+id/splash_stage2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cream_bg"
+        android:src="@drawable/splash_mclipthat"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/app_name" />
+
+    <ImageView
+        android:id="@+id/splash_stage1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        android:src="@drawable/splash_fluxtech"
+        android:scaleType="fitCenter"
+        android:contentDescription="FluxTech" />
+
+</FrameLayout>

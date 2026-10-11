@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- "M Clip that!" logo palette: pale yellow/cream + dark charcoal … -->
+    <color name="cream_bg">#FFF9BF</color>
+    <color name="cream_card">#FFFFFF</color>
+    <color name="cream_deep">#F1EAC0</color>
+    <color name="charcoal">#2E2E2E</color>
+    <color name="charcoal2">#6F6F62</color>
+    <!-- … with melon green/yellow-green kept as the accent. -->
+    <color name="melon_accent">#CDDE7F</color>
+    <color name="melon_accent_dark">#9DBE46</color>
+    <color name="melon_on_accent">#1A1A00</color>
+    <color name="clip_red">#D63A3A</color>
+</resources>

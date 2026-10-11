@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Meta Clip That!</string>
+
+    <!-- Home -->
+    <string name="not_recording">NOT RECORDING</string>
+    <string name="rolling">● ROLLING</string>
+    <string name="clip_now">CLIP NOW</string>
+    <string name="start_rolling">START ROLLING</string>
+    <string name="stop_rolling">STOP ROLLING</string>
+    <string name="no_clips_yet">No clips yet</string>
+    <string name="nav_clip">Clip</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Settings -->
+    <string name="section_capture">CAPTURE</string>
+    <string name="section_audio">AUDIO</string>
+    <string name="section_shizuku">SHIZUKU</string>
+    <string name="section_keymapper">KEYMAPPER TRIGGER</string>
+
+    <string name="clip_length_title">Clip length</string>
+    <string name="clip_length_summary">Seconds saved per clip (1–300)</string>
+
+    <string name="buffer_title">Rolling buffer</string>
+    <string name="buffer_summary">How much gameplay stays in memory (max 5 min). Older footage is wiped automatically.</string>
+
+    <string name="fps_title">Frame rate</string>
+    <string name="fps_summary">Capture frame rate</string>
+
+    <string name="internal_audio_title">Internal audio</string>
+    <string name="internal_audio_summary">Capture game/app audio (Android 10+)</string>
+
+    <string name="mic_title">Microphone</string>
+    <string name="mic_summary">Record microphone audio (needs microphone permission)</string>
+
+    <string name="shizuku_setup">PRESS TO SETUP</string>
+    <string name="open_shizuku_app">OPEN SHIZUKU APP</string>
+
+    <string name="keymapper_steps">1. Install KeyMapper (from its GitHub releases) and enable Expert mode in its settings.\n2. Create a key map and pick a trigger (e.g. a controller button).\n3. Add action → Run shell command, and paste the command below.\n4. Save and enable the key map — press the button in-game to clip!</string>
+    <string name="keymapper_command">am broadcast -a com.metaclipthat.action.CLIP_NOW</string>
+</resources>
