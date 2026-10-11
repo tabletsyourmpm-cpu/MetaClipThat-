@@ -1,0 +1,12 @@
+#!/bin/sh
+# Gradle wrapper startup script (simplified POSIX version).
+set -e
+APP_HOME=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd -P)
+if [ -n "$JAVA_HOME" ]; then
+    JAVACMD="$JAVA_HOME/bin/java"
+else
+    JAVACMD="java"
+fi
+exec "$JAVACMD" -Xmx64m -Xms64m \
+    -classpath "$APP_HOME/gradle/wrapper/gradle-wrapper.jar" \
+    org.gradle.wrapper.GradleWrapperMain "$@"
