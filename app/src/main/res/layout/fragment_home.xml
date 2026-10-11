@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/cream_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Status card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/cream_card"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:padding="28dp">
+
+                <TextView
+                    android:id="@+id/tv_status"
+                    style="@style/Text.MetaClipThat.Display"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/not_recording" />
+
+                <TextView
+                    android:id="@+id/tv_status_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/charcoal2" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- The big Medal-style clip button (also the in-app test trigger) -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_clip_now"
+            style="@style/Widget.MetaClipThat.Button.BigClip"
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/clip_now"
+            android:textSize="34sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_start_stop"
+            style="@style/Widget.MetaClipThat.Button.Pill"
+            android:layout_width="match_parent"
+            android:layout_height="76dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/start_rolling"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/tv_last_clip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/no_clips_yet"
+            android:textSize="15sp"
+            android:textColor="@color/charcoal2" />
+
+        <!-- Shizuku status card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="@color/cream_card"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tv_shizuku_status"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="15sp"
+                    android:textColor="@color/charcoal" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_shizuku"
+                    style="@style/Widget.MetaClipThat.Button.Pill"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/shizuku_setup" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>
