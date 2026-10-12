@@ -13,6 +13,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Fetch official Gradle wrapper jar
+        # The wrapper jar is intentionally not committed (it exceeds the
+        # GitHub App's push size limits). Download the official Gradle 8.7
+        # wrapper jar so wrapper validation passes.
+        run: |
+          curl -sL -o gradle/wrapper/gradle-wrapper.jar \
+            "https://github.com/gradle/gradle/raw/v8.7/gradle/wrapper/gradle-wrapper.jar"
+
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
