@@ -96,8 +96,12 @@ You need JDK 17 and the Android SDK (API 34, build-tools):
 4. Add an **action** → choose **Run shell command** → enter exactly:
 
    ```
-   am broadcast -a com.metaclipthat.action.CLIP_NOW
+   am broadcast -a com.metaclipthat.action.CLIP_NOW -p com.metaclipthat
    ```
+
+   (The `-p com.metaclipthat` flag is required: since Android 8, an
+   implicit broadcast like `-a ...` alone is never delivered to
+   manifest-declared receivers. Targeting the package makes it explicit.)
 
 5. Save and **enable** the key map.
 

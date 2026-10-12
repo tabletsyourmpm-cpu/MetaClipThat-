@@ -8,7 +8,9 @@ import android.widget.Toast
 /**
  * Exported clip trigger. KeyMapper (expert mode "Run shell command" action) fires:
  *
- *     am broadcast -a com.metaclipthat.action.CLIP_NOW
+ *     am broadcast -a com.metaclipthat.action.CLIP_NOW -p com.metaclipthat
+ * (-p required: Android 8+ never delivers implicit broadcasts to
+ * manifest-declared receivers)
  *
  * Clipping never interrupts rolling: the service keeps the ring buffer running
  * and the clipped segment stays buffered so the user can clip again immediately.

@@ -43,7 +43,9 @@
             android:exported="false" />
 
         <!-- Fired by KeyMapper (expert mode shell action) or any other app:
-             am broadcast -a com.metaclipthat.action.CLIP_NOW -->
+             am broadcast -a com.metaclipthat.action.CLIP_NOW -p com.metaclipthat
+             (-p is required: Android 8+ drops implicit broadcasts to
+             manifest-declared receivers) -->
         <receiver
             android:name=".ClipReceiver"
             android:exported="true">
