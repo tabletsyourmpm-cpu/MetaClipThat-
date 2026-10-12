@@ -42,3 +42,27 @@ dependencies {
     implementation("dev.rikka.shizuku:api:13.1.5")
     implementation("dev.rikka.shizuku:provider:13.1.5")
 }
+
+// The Freckle Face font (OFL-licensed, matches the app logo) is fetched at
+// build time from the google/fonts repo instead of being committed as a
+// binary. Runs before resources are merged so R.font.freckle_face resolves.
+tasks.register("downloadFreckleFaceFont") {
+    val dest = file("src/main/res/font/freckle_face.ttf")
+    outputs.file(dest)
+    doLast {
+        if (!dest.exists()) {
+            dest.parentFile.mkdirs()
+            println("Downloading Freckle Face font...")
+            java.net.URI(
+                "https://github.com/google/fonts/raw/main/ofl/freckleface/FreckleFace-Regular.ttf"
+            ).toURL().openStream().use { input ->
+                dest.outputStream().use { output -> input.copyTo(output) }
+            }
+            println("Freckle Face font downloaded.")
+        }
+    }
+}
+
+tasks.named("preBuild") {
+    dependsOn("downloadFreckleFaceFont")
+}
