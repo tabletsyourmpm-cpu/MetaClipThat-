@@ -53,7 +53,7 @@ tasks.register("downloadFreckleFaceFont") {
         if (!dest.exists()) {
             dest.parentFile.mkdirs()
             println("Downloading Freckle Face font...")
-            java.net.URI(
+            project.uri(
                 "https://github.com/google/fonts/raw/main/ofl/freckleface/FreckleFace-Regular.ttf"
             ).toURL().openStream().use { input ->
                 dest.outputStream().use { output -> input.copyTo(output) }
