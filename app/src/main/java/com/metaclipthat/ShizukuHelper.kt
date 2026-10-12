@@ -51,8 +51,9 @@ object ShizukuHelper {
 
     /**
      * Quest exposes its refresh rate via this system property (needs Shizuku shell).
-     * Note: Shizuku has deprecated newProcess (13.1.x) in favor of UserService;
-     * it still exists in 13.1.5, hence the suppress. Revisit if the API removes it.
+     * Note: Shizuku deprecated newProcess in 13.1.x (in favor of UserService) and
+     * made it private in 13.1.5, so we pin the Shizuku artifacts to 13.1.0 where
+     * the 3-arg overload is still public. Revisit if the API removes it.
      */
     @Suppress("DEPRECATION")
     fun questRefreshRate(): Int? {
